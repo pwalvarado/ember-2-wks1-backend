@@ -17,7 +17,7 @@ end
     product.title       = Faker::Commerce.product_name
     product.description = Faker::Lorem.paragraph
     product.price       = Faker::Commerce.price
-    product.category = Category.all.sample
+    product.category    = Category.all.sample
 
     # Retrieve a random image from lorempixel.com
     # and store it as a base64 string.

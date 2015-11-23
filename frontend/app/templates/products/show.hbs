@@ -22,17 +22,18 @@
   </div>
 
   <div class='reviews'>
-  {{#each model.reviews as |review|}}
-    <div class='row'>
-      <div class='col-md-12'>
-        {{star-rating startCount=review.rating}}
-        {{review.user}}
-        <span class='pull-right'>{{moment-from-now review.createdAt}}</span>
-        <p>{{review.description}}</p>
+    {{#each model.reviews as |review|}}
+      <div class='row'>
+        <div class='col-md-12'>
+          {{star-rating starCount=review.rating}}
+          {{review.user}}
+          <span class='pull-right'>{{moment-from-now review.createdAt}}</span>
+          <p>{{review.description}}</p>
+        </div>
       </div>
-    </div>
-    <hr>
-  {{/each}}
+
+      <hr>
+    {{/each}}
   </div>  <!-- /.content-detail -->
 {{else}}
   <form {{action 'submit' on='submit'}} role='form' class='well'>
