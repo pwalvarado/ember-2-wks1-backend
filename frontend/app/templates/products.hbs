@@ -17,6 +17,7 @@
           <img src={{product.image}} alt=''>
           <div class='caption'>
             <h4 class='pull-right'>${{product.price}}</h4>
+            <p class='badge'>{{product.categoryName}}</p>
             <h4>{{#link-to 'products.show' product}}{{product.title}}{{/link-to}}</h4>
             <p>{{product.description}}</p>
           </div>
