@@ -2,7 +2,7 @@
   <div class='content-navigation'>
     <p class='lead'>Ember workShop</p>
     {{#each uniqCategories as |category| }}
-      {{#link-to 'products' class='list-goup-item'}}{{category.name}}{{/link-to}}
+      {{#link-to 'products' (query-params category=category.name) class='list-group-item'}}{{category.name}}{{/link-to}}
     {{/each}}
 
   </div>  <!-- /.content-navigation -->
