@@ -12,5 +12,7 @@ export default Ember.Controller.extend({
       return search.test(str);
     });
     return products;
-  })
+  }),
+  categories: Ember.computed.mapBy('model', 'category'),
+  uniqCategories: Ember.computed.uniq('categories')
 });
